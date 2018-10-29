@@ -4,6 +4,8 @@ services:
     image: kukks/btcpayserverslackbot
     restart: unless-stopped
     build: ./BtcPayServerSlackBot
+    volumes:
+      - "./data:/app/data:rw"
     environment:
       - SlackApiKey
       - HelpEnabled
